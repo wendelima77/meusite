@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exposição do Grupo</title>
+  <style>
+    /* CSS global */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    nav a {
+        text-decoration: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      background-color: #555;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #777;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    footer {
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo ao Site do Grupo</h1>
+    <nav>
+      <a href="#apresentacao" onclick="navigate('apresentacao')">Apresentação</a>
+      <a href="#galeria" onclick="navigate('galeria')">Galeria</a>
+      <a href="#cadastro" onclick="navigate('cadastro')">Cadastro</a>
+    </nav>
+</header>
+
+<main id="content">
+  <!-- Conteúdo inicial será carregado aqui -->
+</main>
+
+<footer>
+  &copy; 2024 - Todos os direitos reservados.
+</footer>
+
+<script>
+  function navigate(page) {
+    const content = document.getElementById('content');
+    if (page === 'apresentacao') {
+      content.innerHTML = `
+        <section>
+          <h2>Apresentação</h2>
+          <article>
+            <h3>Integrante 1</h3>
+            <img src="859eb5c0-24b5-4b11-98a3-d7e1f171976f - Atalho.lnk" alt="Foto do Integrante 1" width="350px">
+            <p>Nome: Wendel Lima.</p>
+            <p>Competências: Desenvolvimento web, design gráfico.</p>
+            <p>Experiências: Freelancer em design.</p>
+            <p>Escolaridade: Superior em TI.</p>
+          </article>
+          <article>
+            <h3>Integrante 2</h3>
+            <img src="51639d9e-a552-4f26-827f-35c54bb450f6 - Atalho.lnk" alt="Foto do Integrante 2" width="350px">
+              <p>Nome: Mauro Guilherme.</p>
+              <p>Competências: Programação, análise de dados.</p>
+              <p>Experiências: Analista de sistemas.</p>
+              <p>Escolaridade: Superior em Engenharia de Software.</p>
+            </article>
+          </section>
+        `;
+      } else if (page === 'galeria') {
+        content.innerHTML = `
+          <section>
+            <h2>Galeria</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+              <div style="flex: 1; min-width: 150px; background: #eee; padding: 1rem;">
+                <p>Interesses de Wendel </p>
+                <img src="ij.jfif" alt="Imagem 1">
+                <img src="tlou.jfif" alt="Imagem 1">
+                <p>JOGOS: Indiana Jones,The Last Of Us</p>
+                <img src="BB.jfif" alt="Imagem 1">
+                <img src="GOT.jfif" alt="Imagem 1">
+                <p>SÉRIES: Breaking Bad,Game Of Thrones </p>
+                <img src="MM.jfif" alt="Imagem 1">
+                <img src="ye.jfif" alt="Imagem 1">
+                 <p>BANDAS/CANTORES: Eminem,Ye(Kanye West)</p>
+                
+              </div>
+              <div style="flex: 1; min-width: 150px; background: #eee; padding: 1rem;">
+                <p>Interesses de Mauro</p>
+                <img src="images.jfif" alt="Imagem 2">
+                <img src="cod.jfif" alt="Imagem 2">
+                <p>JOGOS: NBA2K,Call Of Duty</p>
+                <img src="BB.jfif" alt="Imagem 2">
+                <img src="GOT.jfif" alt="Imagem 2">
+                <p>SÉRIES: Breaking Bad,Game Of Thrones </p>
+                <img src="PM.jfif" alt="Imagem 2">
+                <img src="ye.jfif" alt="Imagem 2">
+                <p>BANDAS/CANTORES: Post Malone,Ye(Kanye West)</p>
+                
+            
+              </div>
+            </div>
+          </section>
+        `;
+      } else if (page === 'cadastro') {
+        content.innerHTML = `
+          <section>
+            <h2>Cadastro</h2>
+            <form>
+                 <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required><br><br>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br><br>
+
+              <label for="opiniao">Opinião sobre o site:</label><br>
+              <textarea id="opiniao" name="opiniao" rows="4" cols="50"></textarea><br><br>
+
+              <button type="submit">Enviar</button>
+            </form>
+          </section>
+        `;
+      }
+    }
+
+    // Carregar tela inicial
+    navigate('apresentacao');
+  </script>
+</body>
+</html>
